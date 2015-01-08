@@ -1,0 +1,12 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 20
+  username: pascal
+development:
+  <<: *default
+  database: counters_development
+
+test:
+  <<: *default
+  database: couters_test
